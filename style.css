@@ -1,0 +1,8 @@
+.table-wrap {
+box-shadow: 0 4px 16px rgba(255, 183, 77, 0.06);
+border-radius: 1rem;
+overflow: hidden;
+}
+.section-title {
+letter-spacing: 0.03em;
+}

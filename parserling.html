@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>LitStats — Аналитика жанров</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-orange-50 min-h-screen">
+    <div class="max-w-6xl mx-auto py-8 px-2">
+      <div class="flex flex-col md:flex-row items-center justify-between mb-6">
+        <h1 class="text-3xl font-bold text-orange-700 mb-4 md:mb-0">
+          Аналитика жанров
+        </h1>
+        <div class="flex gap-4 items-center">
+          <label for="genre" class="font-semibold text-gray-700">Жанр:</label>
+          <select
+            id="genre"
+            class="rounded-lg px-3 py-2 border border-orange-300 shadow focus:ring focus:ring-orange-100 bg-white text-gray-700 font-semibold"
+          >
+            <option>Боевое фентези</option>
+            <option>Историческое фентези</option>
+            <option>Городское фентези</option>
+            <option>Приключенческое фентези</option>
+            <option>Юмористическое фентези</option>
+            <option>Бытовое фентези</option>
+            <option>Эпическое фентези</option>
+            <option>Магическая академия фентези</option>
+            <option>Азиатское фентези</option>
+            <option>Славянское фентези</option>
+            <option>Тёмное фентези</option>
+          </select>
+          <span
+            class="bg-white rounded-lg px-4 py-2 shadow text-gray-700 text-base ml-3"
+            >Дата: <b>27.07.2025</b></span
+          >
+        </div>
+      </div>
+
+      <!-- ТОП -->
+      <div class="mb-8">
+        <h2 class="section-title text-xl font-bold text-purple-600 mb-2">
+          ТОП 10
+        </h2>
+        <div
+          class="table-wrap overflow-x-auto border border-purple-200 bg-white"
+        >
+          <table class="min-w-full table-auto">
+            <thead class="bg-purple-100">
+              <tr>
+                <th class="py-2 px-3 border">#</th>
+                <th class="py-2 px-3 border">Имя</th>
+                <th class="py-2 px-3 border">Баллы</th>
+                <th class="py-2 px-3 border">Звезды</th>
+                <th class="py-2 px-3 border">Библиотеки</th>
+                <th class="py-2 px-3 border">Глазики</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="hover:bg-purple-50">
+                <td class="py-2 px-3 border">1</td>
+                <td class="py-2 px-3 border">Вася</td>
+                <td class="py-2 px-3 border font-bold">1000</td>
+                <td class="py-2 px-3 border">4.9</td>
+                <td class="py-2 px-3 border">10</td>
+                <td class="py-2 px-3 border">1200</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">2</td>
+                <td class="py-2 px-3 border">Петя</td>
+                <td class="py-2 px-3 border font-bold">900</td>
+                <td class="py-2 px-3 border">4.7</td>
+                <td class="py-2 px-3 border">8</td>
+                <td class="py-2 px-3 border">900</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">3</td>
+                <td class="py-2 px-3 border">Маша</td>
+                <td class="py-2 px-3 border font-bold">850</td>
+                <td class="py-2 px-3 border">4.6</td>
+                <td class="py-2 px-3 border">7</td>
+                <td class="py-2 px-3 border">800</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">4</td>
+                <td class="py-2 px-3 border">Игорь</td>
+                <td class="py-2 px-3 border font-bold">800</td>
+                <td class="py-2 px-3 border">4.5</td>
+                <td class="py-2 px-3 border">6</td>
+                <td class="py-2 px-3 border">750</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">5</td>
+                <td class="py-2 px-3 border">Катя</td>
+                <td class="py-2 px-3 border font-bold">750</td>
+                <td class="py-2 px-3 border">4.4</td>
+                <td class="py-2 px-3 border">5</td>
+                <td class="py-2 px-3 border">700</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">6</td>
+                <td class="py-2 px-3 border">Оля</td>
+                <td class="py-2 px-3 border font-bold">700</td>
+                <td class="py-2 px-3 border">4.3</td>
+                <td class="py-2 px-3 border">4</td>
+                <td class="py-2 px-3 border">650</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">7</td>
+                <td class="py-2 px-3 border">Максим</td>
+                <td class="py-2 px-3 border font-bold">650</td>
+                <td class="py-2 px-3 border">4.2</td>
+                <td class="py-2 px-3 border">3</td>
+                <td class="py-2 px-3 border">600</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">8</td>
+                <td class="py-2 px-3 border">Даша</td>
+                <td class="py-2 px-3 border font-bold">600</td>
+                <td class="py-2 px-3 border">4.1</td>
+                <td class="py-2 px-3 border">2</td>
+                <td class="py-2 px-3 border">550</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">9</td>
+                <td class="py-2 px-3 border">Лёша</td>
+                <td class="py-2 px-3 border font-bold">550</td>
+                <td class="py-2 px-3 border">4.0</td>
+                <td class="py-2 px-3 border">1</td>
+                <td class="py-2 px-3 border">500</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">10</td>
+                <td class="py-2 px-3 border">Женя</td>
+                <td class="py-2 px-3 border font-bold">500</td>
+                <td class="py-2 px-3 border">3.9</td>
+                <td class="py-2 px-3 border">1</td>
+                <td class="py-2 px-3 border">450</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ГОРЯЧИЕ НОВИНКИ -->
+      <div class="mb-8">
+        <h2 class="section-title text-xl font-bold text-red-600 mb-2">
+          ГОРЯЧИЕ НОВИНКИ — ТОП 10
+        </h2>
+        <div class="table-wrap overflow-x-auto border border-red-200 bg-white">
+          <table class="min-w-full table-auto">
+            <thead class="bg-red-100">
+              <tr>
+                <th class="py-2 px-3 border">#</th>
+                <th class="py-2 px-3 border">Имя</th>
+                <th class="py-2 px-3 border">Баллы</th>
+                <th class="py-2 px-3 border">Звезды</th>
+                <th class="py-2 px-3 border">Библиотеки</th>
+                <th class="py-2 px-3 border">Глазики</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="hover:bg-red-50">
+                <td class="py-2 px-3 border">1</td>
+                <td class="py-2 px-3 border">Аня</td>
+                <td class="py-2 px-3 border font-bold">1000</td>
+                <td class="py-2 px-3 border">5.0</td>
+                <td class="py-2 px-3 border">9</td>
+                <td class="py-2 px-3 border">1200</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">2</td>
+                <td class="py-2 px-3 border">Петя</td>
+                <td class="py-2 px-3 border font-bold">950</td>
+                <td class="py-2 px-3 border">4.8</td>
+                <td class="py-2 px-3 border">8</td>
+                <td class="py-2 px-3 border">1150</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">3</td>
+                <td class="py-2 px-3 border">Кира</td>
+                <td class="py-2 px-3 border font-bold">920</td>
+                <td class="py-2 px-3 border">4.7</td>
+                <td class="py-2 px-3 border">7</td>
+                <td class="py-2 px-3 border">1100</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">4</td>
+                <td class="py-2 px-3 border">Маша</td>
+                <td class="py-2 px-3 border font-bold">900</td>
+                <td class="py-2 px-3 border">4.6</td>
+                <td class="py-2 px-3 border">6</td>
+                <td class="py-2 px-3 border">1050</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">5</td>
+                <td class="py-2 px-3 border">Вася</td>
+                <td class="py-2 px-3 border font-bold">870</td>
+                <td class="py-2 px-3 border">4.5</td>
+                <td class="py-2 px-3 border">5</td>
+                <td class="py-2 px-3 border">1000</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">6</td>
+                <td class="py-2 px-3 border">Дима</td>
+                <td class="py-2 px-3 border font-bold">850</td>
+                <td class="py-2 px-3 border">4.4</td>
+                <td class="py-2 px-3 border">4</td>
+                <td class="py-2 px-3 border">950</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">7</td>
+                <td class="py-2 px-3 border">Максим</td>
+                <td class="py-2 px-3 border font-bold">800</td>
+                <td class="py-2 px-3 border">4.3</td>
+                <td class="py-2 px-3 border">3</td>
+                <td class="py-2 px-3 border">900</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">8</td>
+                <td class="py-2 px-3 border">Оля</td>
+                <td class="py-2 px-3 border font-bold">750</td>
+                <td class="py-2 px-3 border">4.2</td>
+                <td class="py-2 px-3 border">2</td>
+                <td class="py-2 px-3 border">850</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">9</td>
+                <td class="py-2 px-3 border">Катя</td>
+                <td class="py-2 px-3 border font-bold">700</td>
+                <td class="py-2 px-3 border">4.1</td>
+                <td class="py-2 px-3 border">1</td>
+                <td class="py-2 px-3 border">800</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">10</td>
+                <td class="py-2 px-3 border">Женя</td>
+                <td class="py-2 px-3 border font-bold">650</td>
+                <td class="py-2 px-3 border">4.0</td>
+                <td class="py-2 px-3 border">1</td>
+                <td class="py-2 px-3 border">750</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- НАБИРАЮТ ПОПУЛЯРНОСТЬ -->
+      <div class="mb-8">
+        <h2 class="section-title text-xl font-bold text-green-600 mb-2">
+          НАБИРАЮТ ПОПУЛЯРНОСТЬ — ТОП 10
+        </h2>
+        <div
+          class="table-wrap overflow-x-auto border border-green-200 bg-white"
+        >
+          <table class="min-w-full table-auto">
+            <thead class="bg-green-100">
+              <tr>
+                <th class="py-2 px-3 border">#</th>
+                <th class="py-2 px-3 border">Имя</th>
+                <th class="py-2 px-3 border">Баллы</th>
+                <th class="py-2 px-3 border">Звезды</th>
+                <th class="py-2 px-3 border">Библиотеки</th>
+                <th class="py-2 px-3 border">Глазики</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="hover:bg-green-50">
+                <td class="py-2 px-3 border">1</td>
+                <td class="py-2 px-3 border">Лёша</td>
+                <td class="py-2 px-3 border font-bold">900</td>
+                <td class="py-2 px-3 border">4.8</td>
+                <td class="py-2 px-3 border">6</td>
+                <td class="py-2 px-3 border">1150</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">2</td>
+                <td class="py-2 px-3 border">Катя</td>
+                <td class="py-2 px-3 border font-bold">880</td>
+                <td class="py-2 px-3 border">4.7</td>
+                <td class="py-2 px-3 border">5</td>
+                <td class="py-2 px-3 border">1100</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">3</td>
+                <td class="py-2 px-3 border">Петя</td>
+                <td class="py-2 px-3 border font-bold">850</td>
+                <td class="py-2 px-3 border">4.6</td>
+                <td class="py-2 px-3 border">4</td>
+                <td class="py-2 px-3 border">1000</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">4</td>
+                <td class="py-2 px-3 border">Вася</td>
+                <td class="py-2 px-3 border font-bold">800</td>
+                <td class="py-2 px-3 border">4.5</td>
+                <td class="py-2 px-3 border">3</td>
+                <td class="py-2 px-3 border">900</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">5</td>
+                <td class="py-2 px-3 border">Аня</td>
+                <td class="py-2 px-3 border font-bold">780</td>
+                <td class="py-2 px-3 border">4.4</td>
+                <td class="py-2 px-3 border">2</td>
+                <td class="py-2 px-3 border">800</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">6</td>
+                <td class="py-2 px-3 border">Игорь</td>
+                <td class="py-2 px-3 border font-bold">760</td>
+                <td class="py-2 px-3 border">4.3</td>
+                <td class="py-2 px-3 border">2</td>
+                <td class="py-2 px-3 border">750</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">7</td>
+                <td class="py-2 px-3 border">Оля</td>
+                <td class="py-2 px-3 border font-bold">720</td>
+                <td class="py-2 px-3 border">4.2</td>
+                <td class="py-2 px-3 border">1</td>
+                <td class="py-2 px-3 border">700</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">8</td>
+                <td class="py-2 px-3 border">Кира</td>
+                <td class="py-2 px-3 border font-bold">700</td>
+                <td class="py-2 px-3 border">4.1</td>
+                <td class="py-2 px-3 border">1</td>
+                <td class="py-2 px-3 border">600</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">9</td>
+                <td class="py-2 px-3 border">Дима</td>
+                <td class="py-2 px-3 border font-bold">680</td>
+                <td class="py-2 px-3 border">4.0</td>
+                <td class="py-2 px-3 border">1</td>
+                <td class="py-2 px-3 border">500</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">10</td>
+                <td class="py-2 px-3 border">Женя</td>
+                <td class="py-2 px-3 border font-bold">650</td>
+                <td class="py-2 px-3 border">3.9</td>
+                <td class="py-2 px-3 border">1</td>
+                <td class="py-2 px-3 border">400</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- ГОРЯЧИЕ НОВИНКИ -->
+      <div class="mb-8">
+        <h2 class="section-title text-xl font-bold text-blue-600 mb-2">
+          ГОРЯЧИЕ НОВИНКИ — ТОП 10
+        </h2>
+        <div class="table-wrap overflow-x-auto border border-blue-200 bg-white">
+          <table class="min-w-full table-auto">
+            <thead class="bg-blue-100">
+              <tr>
+                <th class="py-2 px-3 border">#</th>
+                <th class="py-2 px-3 border">Имя</th>
+                <th class="py-2 px-3 border">Баллы</th>
+                <th class="py-2 px-3 border">Звезды</th>
+                <th class="py-2 px-3 border">Библиотеки</th>
+                <th class="py-2 px-3 border">Глазики</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="hover:bg-blue-50">
+                <td class="py-2 px-3 border">1</td>
+                <td class="py-2 px-3 border">Аня</td>
+                <td class="py-2 px-3 border font-bold">1000</td>
+                <td class="py-2 px-3 border">5.0</td>
+                <td class="py-2 px-3 border">9</td>
+                <td class="py-2 px-3 border">1200</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">2</td>
+                <td class="py-2 px-3 border">Петя</td>
+                <td class="py-2 px-3 border font-bold">950</td>
+                <td class="py-2 px-3 border">4.8</td>
+                <td class="py-2 px-3 border">8</td>
+                <td class="py-2 px-3 border">1150</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">3</td>
+                <td class="py-2 px-3 border">Кира</td>
+                <td class="py-2 px-3 border font-bold">920</td>
+                <td class="py-2 px-3 border">4.7</td>
+                <td class="py-2 px-3 border">7</td>
+                <td class="py-2 px-3 border">1100</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">4</td>
+                <td class="py-2 px-3 border">Маша</td>
+                <td class="py-2 px-3 border font-bold">900</td>
+                <td class="py-2 px-3 border">4.6</td>
+                <td class="py-2 px-3 border">6</td>
+                <td class="py-2 px-3 border">1050</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">5</td>
+                <td class="py-2 px-3 border">Вася</td>
+                <td class="py-2 px-3 border font-bold">870</td>
+                <td class="py-2 px-3 border">4.5</td>
+                <td class="py-2 px-3 border">5</td>
+                <td class="py-2 px-3 border">1000</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">6</td>
+                <td class="py-2 px-3 border">Дима</td>
+                <td class="py-2 px-3 border font-bold">850</td>
+                <td class="py-2 px-3 border">4.4</td>
+                <td class="py-2 px-3 border">4</td>
+                <td class="py-2 px-3 border">950</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">7</td>
+                <td class="py-2 px-3 border">Максим</td>
+                <td class="py-2 px-3 border font-bold">800</td>
+                <td class="py-2 px-3 border">4.3</td>
+                <td class="py-2 px-3 border">3</td>
+                <td class="py-2 px-3 border">900</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">8</td>
+                <td class="py-2 px-3 border">Оля</td>
+                <td class="py-2 px-3 border font-bold">750</td>
+                <td class="py-2 px-3 border">4.2</td>
+                <td class="py-2 px-3 border">2</td>
+                <td class="py-2 px-3 border">850</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">9</td>
+                <td class="py-2 px-3 border">Катя</td>
+                <td class="py-2 px-3 border font-bold">700</td>
+                <td class="py-2 px-3 border">4.1</td>
+                <td class="py-2 px-3 border">1</td>
+                <td class="py-2 px-3 border">800</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 border">10</td>
+                <td class="py-2 px-3 border">Женя</td>
+                <td class="py-2 px-3 border font-bold">650</td>
+                <td class="py-2 px-3 border">4.0</td>
+                <td class="py-2 px-3 border">1</td>
+                <td class="py-2 px-3 border">750</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
