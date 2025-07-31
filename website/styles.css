@@ -1,0 +1,423 @@
+  html {
+      cursor: url('images/feather48.png') 6 44, auto;
+  }
+
+  body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      background-image: url('images/castle-bg.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    margin: 40px auto;
+    max-width: 1600px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .frame {
+    background-color: #f9f9f9;
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    padding-top: 0px;
+    width: 100%;
+    min-width: 260px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    flex: 1 1 300px;
+  }
+
+  .author-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .author-photo {
+    width: 110px;
+    height: 110px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 1px solid #bbb;
+    background: #fff;
+    flex-shrink: 0;
+  }
+
+  .author-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .author-nickname {
+    margin: 0 0 12px 0;
+    font-size: 1.1em;
+    font-style: italic;
+  }
+
+  .author-description {
+    margin: 0;
+    color: #333;
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  .author-books {
+    margin-top: 32px;
+    padding-top: 0px;
+    border-top: 2.5px dashed #1761a0;
+    background: linear-gradient(90deg, #e3f0fa 65%, rgba(255,255,255,0.2));
+    box-shadow: 0 -3px 10px 0 rgba(23,97,160,0.04);
+  }
+
+  .year-block {
+    margin-bottom: 13px;
+  }
+
+  .books-year {
+    font-weight: bold;
+    color: #1761a0;
+    font-size: 1.07em;
+    text-align: center;
+    margin-bottom: 2px;
+  }
+
+  .books-list {
+    margin-top: 0;
+    margin-bottom: 5px;
+    padding-left: 24px;
+    color: #23333a;
+    font-size: 0.98em;
+  }
+
+
+  #bibliography {
+    background-color: #e6f7ff;
+  }
+
+  #books {
+    background-color: #fffbe6;
+  }
+
+  #heroes {
+    background-color: #e0ffe0;
+  }
+
+  .hero-photo {
+      display: flex;
+    width: 110px;
+    height: 110px;
+    border-radius: 11px;
+    object-fit: cover;
+    border: 2px solid #176930;
+    background: #fff;
+    box-shadow: 0 1px 9px rgba(23,105,48,0.08);
+    margin: 0 auto 18px auto; 
+  }
+
+.carousel-container {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.carousel-slide {
+  display: none;
+  align-items: flex-start;
+  gap: 22px;
+  background: #eefdfe;
+  border-radius: 12px;
+  padding: 16px 15px 17px 17px;
+  box-shadow: 0 2px 10px rgba(11,70,58,0.07);
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.carousel-slide.active {
+  display: flex;
+}
+
+.hero-photo {
+  width: 90px;
+  height: 90px;
+  border-radius: 11px;
+  object-fit: cover;
+  border: 2px solid #176930;
+  background: #fff;
+  flex-shrink: 0;
+  box-shadow: 0 1px 9px rgba(23,105,48,0.08);
+}
+
+.hero-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.hero-name {
+  font-weight: 700;
+  color: #155e49;
+  font-size: 1.08em;
+  margin-bottom: 7px;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  letter-spacing: 0.6px;
+}
+
+.hero-citation {
+  margin: 0;
+  color: #296566;
+  font-style: italic;
+  background: #f0feee;
+  border-left: 4px solid #39ad62;
+  padding: 8px 14px;
+  border-radius: 7px 10px 10px 7px;
+  box-shadow: 0 2px 7px rgba(99,217,125,0.07);
+  font-size: 1em;
+}
+
+/* Навигационные кнопки */
+.carousel-btn {
+  position: absolute;
+  top: 65%;
+  transform: translateY(-50%);
+  background: rgba(21,94,73,0.8);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background: rgba(21,94,73,1);
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+/* Индикаторы */
+.carousel-indicators {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.indicator {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.indicator.active {
+  background: #155e49;
+}
+
+.indicator:hover {
+  background: #39ad62;
+}
+
+.center-frame {
+  background: #ffe4e4;            /* solid color, not rgba */
+  border: 2px solid #333;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+  padding: 22px 22px 35px 22px;
+  width: 96%;                     /* increase width */
+  min-width: 320px;
+  max-width: 620px;
+  margin-top: 0;                   /* ensures top alignment */
+}
+
+.center-frame h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #d18ce0;
+  letter-spacing: 0.08em;
+  margin-bottom: 32px;
+  text-shadow: 0 2px 18px rgba(164, 114, 198, 0.13);
+  text-align: center;
+  width: 100%;
+}
+
+.main-wrap {
+  width: 100%;
+}
+
+.author-name {
+  margin-top: 0;
+  font-size: 2.1rem;
+  color: #d18ce0;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-shadow: 0 2px 18px rgba(164, 114, 198, 0.13);
+  margin-bottom: 16px;
+}
+
+.book-title {
+  border: 2px solid #f7b6b6;
+  border-radius: 18px;
+  padding: 18px 32px;
+  margin: 0 0 28px 0;
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.85);
+  color: #453a62;
+  font-weight: 700;
+  box-shadow: 0 2px 12px rgba(245, 173, 255, 0.1);
+  text-align: center;
+}
+
+.promo-img {
+  width: 100%;
+  max-width: 540px;
+  height: auto;
+  border-radius: 20px;
+  margin-bottom: 28px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 22px rgba(161, 255, 242, 0.10);
+  background: #f8e5fd;
+  display: block;
+}
+
+.annotation {
+  background: rgba(255, 255, 255, 0.74);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 32px;
+  font-size: 1.17rem;
+  color: #255f81;
+  line-height: 1.62;
+  box-shadow: 0 2px 9px rgba(180, 180, 220, 0.07);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.book-cover {
+  margin-bottom: 28px;
+  width: 90%;
+  max-width: 420px;
+  height: auto;
+  aspect-ratio: 2/3;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 2px 18px rgba(255, 102, 204, 0.13);
+  background: #e3e7fa;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.excerpt {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  padding: 20px 22px 12px 22px;
+  margin-top: 10px;
+  margin-bottom: 0;
+
+  background: linear-gradient(90deg, #fae7fa 50%, #e1f3ff 100%);
+  border-radius: 13px;
+  box-shadow: 0 2px 12px rgba(250, 208, 235, 0.08);
+
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 1.16rem;
+  color: #19191a;
+  font-style: italic;
+  line-height: 1.55;
+
+  text-align: left;
+
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.excerpt p {
+  margin: 0 0 1em 0;
+}
+
+@media (max-width: 650px) {
+  .center-frame {
+    max-width: 98vw;
+    padding: 16px 12px 28px 12px;
+  }
+  .author-name {
+    font-size: 1.5rem;
+  }
+  .book-title {
+    font-size: 1.4rem;
+    padding: 12px 16px;
+  }
+  .promo-img {
+    max-width: 100vw;
+  }
+  .annotation,
+  .excerpt {
+    padding: 12px 10px;
+  }
+  .book-cover {
+    width: 120px;
+    height: 180px;
+  }
+}
+
+.external-link-button {
+    display: block;
+    width: 300px;
+    margin: 30px auto 0 auto;
+    padding: 20px 20px;
+    background-color: #d18ce0;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.external-link-button:hover {
+    background-color: #b97ac9;
+    transform: translateY(-2px);
+}
+
+#coauthorship-block {
+    box-shadow: 0 -3px 10px 0 rgba(23, 97, 160, 0.04);
+    border-top: 2.5px dashed #4a6a9b;
+    margin-top: 24px;
+    padding-top: 10px;
+}
